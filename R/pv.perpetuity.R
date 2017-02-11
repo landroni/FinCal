@@ -19,7 +19,7 @@ pv.perpetuity <- function(r, pmt, g=0, type=0){
     if(g >= r){
       print("Error: g is not smaller than r!")
     }else{
-      pv <- (pmt / (r - g)) * ((1 + r)^type) * (-1)
+      pv <- (pmt / (r - g)) * ((1 + r)^type)
       return(pv) 
     }
   }
