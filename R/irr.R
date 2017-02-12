@@ -10,5 +10,6 @@
 irr <- function(cf){
         n <- length(cf)
         subcf <- cf[2:n]
-        uniroot(function(r) -1 * pv.uneven(r, subcf) + cf[1], interval=c(1e-10,1e10),extendInt="yes")$root 
+        uniroot(function(r) -1 * pv.uneven(r, subcf) + cf[1], 
+                interval=c(1e-10,1e10), extendInt="yes", tol = .Machine$double.eps)$root 
 }
